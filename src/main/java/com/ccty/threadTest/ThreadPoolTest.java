@@ -2,10 +2,7 @@ package com.ccty.threadTest;
 
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * 启动线程的几种方式
@@ -26,7 +23,7 @@ public class ThreadPoolTest {
         }
     }
     //启动线程的4中方式
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         new MyThread1().start();
 
@@ -41,6 +38,9 @@ public class ThreadPoolTest {
                 new ArrayBlockingQueue<>(10),Executors.defaultThreadFactory() ,new ThreadPoolExecutor.CallerRunsPolicy() );
         tpe.execute(new MyThread2());
         tpe.shutdown();
+        // 可获取线程执行结果
+        Future future = tpe.submit(new MyThread2());
+        future.get();
 
 
         ThreadPoolTaskExecutor tpte = new ThreadPoolTaskExecutor();
@@ -56,6 +56,12 @@ public class ThreadPoolTest {
 
         tpte.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         tpte.initialize();
+
+        System.out.println(Integer.valueOf("fff".hashCode()));
+
+
+
+
 
         // TODO AsyncThreadPoolTest();
 
