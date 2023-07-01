@@ -1,0 +1,17 @@
+.idea　　　　
+.mvn　　　　
+.iml
+mvnw
+mvnw.cmd
+logs/
+target/
+ 
+.project
+.settings
+.classpath
+./.idea
+./target
+./.gitignore
+
+/.idea/*
+

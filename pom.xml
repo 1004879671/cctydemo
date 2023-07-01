@@ -75,7 +75,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
+            <version>1.2.67</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -85,8 +85,14 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.12</version>
+            <version>8.0.28</version>
             <scope>runtime</scope>
+        </dependency>
+        <!--阿里druid连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.22</version>
         </dependency>
         <!--mybatis-plus启动依赖-->
         <dependency>
@@ -94,11 +100,17 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter-test</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
         <!--mybatis-plus自动生成器依赖-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.5.1</version>
+            <version>3.5.1</version>>
         </dependency>
         <!--        模板引擎依赖-->
         <dependency>

@@ -2,6 +2,8 @@ package com.ccty.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,9 +15,8 @@ import lombok.Setter;
  * @author 张峰
  * @since 2023-07-02
  */
-@Getter
-@Setter
-  @TableName("t_user")
+@Data
+@TableName("t_user")
 public class TUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
